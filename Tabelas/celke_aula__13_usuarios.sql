@@ -18,29 +18,36 @@ USE `celke`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `aula_4`
+-- Table structure for table `aula__13_usuarios`
 --
 
-DROP TABLE IF EXISTS `aula_4`;
+DROP TABLE IF EXISTS `aula__13_usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `aula_4` (
+CREATE TABLE `aula__13_usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(220) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(220) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `senha` int(6) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `sits_usuario` int(11) NOT NULL,
+  `niveis_acesso` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `13__sits)user_idx` (`sits_usuario`),
+  KEY `13__niveis)user_idx` (`niveis_acesso`),
+  CONSTRAINT `13__niveis)user` FOREIGN KEY (`niveis_acesso`) REFERENCES `aula__13_niveis_acessos` (`id`),
+  CONSTRAINT `13__sits)user` FOREIGN KEY (`sits_usuario`) REFERENCES `aula__13_sits_usuarios` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `aula_4`
+-- Dumping data for table `aula__13_usuarios`
 --
 
-LOCK TABLES `aula_4` WRITE;
-/*!40000 ALTER TABLE `aula_4` DISABLE KEYS */;
-INSERT INTO `aula_4` VALUES (1,'Henrique','Henrique@gmail.com',90209),(2,'Bianca','Bianca@gmail.com',240715),(3,'Rosângela','Rosângela@gmail.com',311076),(4,'Raul','Raul@gmail.com',261071);
-/*!40000 ALTER TABLE `aula_4` ENABLE KEYS */;
+LOCK TABLES `aula__13_usuarios` WRITE;
+/*!40000 ALTER TABLE `aula__13_usuarios` DISABLE KEYS */;
+INSERT INTO `aula__13_usuarios` VALUES (1,'bianca','bps@.com',1,3,'2023-01-14 12:29:03',NULL),(2,'henrique','hps@.com',3,1,'2023-01-14 12:29:03','2023-01-14 18:56:12'),(3,'rosangela','ros@.com',2,2,'2023-01-14 12:29:03',NULL),(4,'raul','rps@.com',3,1,'2023-01-14 12:29:03',NULL),(13,'bianca','bps@.com',3,3,'2023-01-14 19:04:12',NULL),(14,'henrique','hps@.com',1,1,'2023-01-14 19:04:12',NULL),(15,'raul','rps@.com',2,2,'2023-01-14 19:04:12',NULL),(16,'rosangela','ros@.com',3,2,'2023-01-14 19:04:12',NULL);
+/*!40000 ALTER TABLE `aula__13_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-15 17:45:41
+-- Dump completed on 2023-01-15 17:45:42

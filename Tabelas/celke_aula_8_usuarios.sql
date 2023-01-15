@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `celke` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
+USE `celke`;
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: celke
@@ -29,10 +31,11 @@ CREATE TABLE `aula_8_usuarios` (
   `sits_usuario` int(11) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `8_usuario_id_idx` (`sits_usuario`),
   CONSTRAINT `aula_8_sists_Id` FOREIGN KEY (`sits_usuario`) REFERENCES `aula_8_sits_usuarios` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +44,7 @@ CREATE TABLE `aula_8_usuarios` (
 
 LOCK TABLES `aula_8_usuarios` WRITE;
 /*!40000 ALTER TABLE `aula_8_usuarios` DISABLE KEYS */;
-INSERT INTO `aula_8_usuarios` VALUES (3,'Bianca','Bianca@gmail.com',3,'2023-01-12 11:57:32',NULL),(4,'Henrique','Henrique@gmail.com',1,'2023-01-12 11:58:23',NULL);
+INSERT INTO `aula_8_usuarios` VALUES (3,'Bianca','bianca@gmail.com',3,'2023-01-12 11:57:32',NULL,1),(4,'Henrique','henrique@gmail.com',1,'2023-01-12 11:58:23',NULL,1),(5,'Rosangela','rosangela@gmail.com',2,'2023-01-13 13:25:32',NULL,1),(6,'Raul','raul@gmail.com',1,'2023-01-12 13:28:12',NULL,1);
 /*!40000 ALTER TABLE `aula_8_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-13 13:18:14
+-- Dump completed on 2023-01-15 17:45:39

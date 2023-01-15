@@ -18,29 +18,25 @@ USE `celke`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `aula_4`
+-- Table structure for table `aula__12_where`
 --
 
-DROP TABLE IF EXISTS `aula_4`;
+DROP TABLE IF EXISTS `aula__12_where`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `aula_4` (
+CREATE TABLE `aula__12_where` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(220) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(220) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `senha` int(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `aula_4`
+-- Dumping data for table `aula__12_where`
 --
 
-LOCK TABLES `aula_4` WRITE;
-/*!40000 ALTER TABLE `aula_4` DISABLE KEYS */;
-INSERT INTO `aula_4` VALUES (1,'Henrique','Henrique@gmail.com',90209),(2,'Bianca','Bianca@gmail.com',240715),(3,'Rosângela','Rosângela@gmail.com',311076),(4,'Raul','Raul@gmail.com',261071);
-/*!40000 ALTER TABLE `aula_4` ENABLE KEYS */;
+LOCK TABLES `aula__12_where` WRITE;
+/*!40000 ALTER TABLE `aula__12_where` DISABLE KEYS */;
+/*!40000 ALTER TABLE `aula__12_where` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-15 17:45:41
+-- Dump completed on 2023-01-15 17:45:43
